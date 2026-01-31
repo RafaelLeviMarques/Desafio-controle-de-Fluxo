@@ -12,21 +12,20 @@ public class Contador {
 		
 		try {
 			contar(parametroUm, parametroDois);
-		} catch (ParametriInvalidoException exception) {
+		} catch (ParametriInvalidoException exceptionx) {
 			System.out.println("Parametro dois tem que ser maior que o primeiro");
 		}
 	}
 	
 	static void contar(int parametroUm, int parametroDois) throws ParametriInvalidoException {
-		if (parametroDois >= parametroUm) {
-			new ParametriInvalidoException();
+		if (parametroDois <= parametroUm) {
+			throw new ParametriInvalidoException();
 		} else {
-			int contagem = (parametroDois- parametroUm);
+			int contagem = (parametroDois - parametroUm);
 			 
 			for (int i = 1; i <= contagem; i++) {
 				System.out.println("imprimindo número " + i);
 			}
 		}
 	}
-
 }
